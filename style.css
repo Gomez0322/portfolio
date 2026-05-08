@@ -1,0 +1,99 @@
+/* Configuración base del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco para que resalte */
+    overflow-x: hidden;
+}
+
+/* Contenedor de la animación de fondo */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Esto lo mantiene detrás de todo */
+    pointer-events: none; /* Evita que interfiera con clics */
+}
+
+/* El objeto que baja (un círculo difuminado) */
+.falling-object {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(20px);
+    animation: fall 8s linear infinite;
+}
+
+/* Animación de caída */
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(-50%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(110vh) translateX(-50%);
+        opacity: 0;
+    }
+}
+
+/* Ajuste para que el contenido sea legible sobre el negro */
+.container {
+    background: rgba(25, 25, 25, 0.8) !important; /* Fondo oscuro traslúcido para el cuadro */
+    backdrop-filter: blur(10px); /* Efecto de cristal esmerilado */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #eeeeee !important;
+}
+
+h1, h2, .subtitle {
+    color: #3498db !important; /* Mantenemos el azul para títulos */
+}
+
+.card {
+    background: #1a1a1a !important;
+    color: #ccc !important;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #3498db;
+    margin-top: 20px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 25px;
+    background-color: #3498db;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: width 0.1s;
+}
+
+.status-text {
+    font-style: italic;
+    font-size: 0.9rem;
+}
