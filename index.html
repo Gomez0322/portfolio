@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación</title>
+    <style>
+        
+        /* Estilos Generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            color: #3498db;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+
+        /* Lista de Habilidades/Intereses */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #3498db;
+            color: white;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>¡Hola! Soy Facundo Gomez</h1>
+            <p class="subtitle">Futuro desarrollador de software</p>
+        </header>
+
+        <section>
+            <h2>Sobre mí</h2>
+            <p>
+                Bienvenido a mi espacio personal. Apasionado por aprender cosas nuevas y 
+                enfrentar retos en el software. Actualmente estoy terminando de estudiar la tec. en desarrollo de software
+                y deceo poder avanzar y tener la experiencia necesaria para trabajar en grandes empresas!
+            </p>
+        </section>
+
+        <section>
+            <h2>Mis Intereses</h2>
+            <div class="grid">
+                <div class="card">💻 Desarrollo Web</div>
+                <div class="card">🚀 Bases de Datos</div>
+                <div class="card">📚 Aprendizaje Continuo</div>
+                <div class="card">🎮 Videojuegos</div>
+            </div>
+        </section>
+
+        <section>
+          <h2>Proyectos en Proceso</h2>
+          <div class="project-card">
+            <h3 id="project-title">Cargando proyecto...</h3>
+            <p>Este es un sistema automatizado que estoy desarrollando para mejorar la productividad.</p>
+        
+            <!-- Barra de progreso -->
+            <div class="progress-container">
+              <div class="progress-bar" id="myBar">0%</div>
+            </div>
+        
+            <p class="status-text">Estado: <span id="status">Iniciando...</span></p>
+          </div>
+        </section>
+
+<!-- Vincular el archivo JS al final del body -->
+<script src="script.js"></script>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Si queres hablar sobre algún proyecto o simplemente saludar, puedes encontrarme en mis redes:</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/Facundo-Gomez">LinkedIn</a>
+                <a href="https://github.com/Gomez0322">GitHub</a>
+                <a href="https://x.com/tu_usuario/Facuu9398249/">Twitter</a>
+                <a href="https://www.instagram.com/facuugomez07/">Instagram</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Creado con pasion por Facundo Gomez</p>
+        </footer>
+    </div>
+    <div class="background-animation">
+    <div class="falling-object"></div>
+    </div>
+
+</body>
+</html>
